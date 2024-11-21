@@ -59,6 +59,5 @@ public class Casting {
 
         int i = 'A' + 'B';
 
-
     }
 }
