@@ -39,11 +39,21 @@ public class MethodQuiz {
         foods = newfood;
     }
     static int remove(String food){
+        int index = -1;
         for (int i = 0; i < foods.length ; i++) {
             if (food.equals(foods[i])){
+                index = i;
+                break;
+            }
+            if (index > 0){
+                for (int j = index; j < foods.length-1 ; j++) {
+                    foods[i] = foods[j+1];
+                    pop();
+                }
 
             }
         }
+            return index;
     }
 
     public static void main(String[] args) {
@@ -59,7 +69,7 @@ public class MethodQuiz {
         System.out.println("index2 = " + index2);
 
         pop();
-//        remove("치킨");
+        remove("치킨");
         printFoods();
 //
 //
