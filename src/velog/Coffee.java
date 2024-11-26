@@ -1,22 +1,30 @@
 package velog;
     //커피 클래스
 public class Coffee {
-    //필드(속성)
-        String name;
-        int price;
+    String name;
+    String region;
+    int price;
 
-        //메서드(행동)
-        void introduce(){
-            System.out.printf(name+ "커피는" +price + "원 입니다");
+        public Coffee(String name, String region, int price) {
+            this.name = name;
+            this.region = region;
+            this.price = price;
+        }
+        // 이름과 지역만 초기화 하는 생성자
+        public Coffee (String name, String region){
+            this(name,region,3000);
+        }
+        //가격과 지역만 초기화 하는 생성자
+        public Coffee(int price, String region) {
+//            this.name = "아메리카노";
+//            this.price = price;
+//            this.region = region;
+            this("아메리카노",region, price);
         }
 
-        public static void main(String[] args) {
-            //coffee 클래스의 인스턴스 생성
-            Coffee coffee1 = new Coffee();
-            coffee1.name ="아메리카노";
-            coffee1.price = 4500;
-
-            coffee1.introduce();
+        void display(){
+            System.out.println("name = " + name);
+            System.out.println("region = " + region);
+            System.out.println("price = " + price);
         }
-
-}
+    }
