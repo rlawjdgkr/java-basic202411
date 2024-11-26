@@ -19,11 +19,8 @@ public class BankAccount {
            System.out.println("잔액부족");
            return;
        }
-       if(balance < amount){
-
-           System.out.printf("%f금액 인출" ,amount);
+        System.out.printf("%f금액 인출" ,amount);
        }
-    }
     void displayBalance(){
 
         System.out.printf("잔액은 %d입니다",balance);
