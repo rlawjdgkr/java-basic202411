@@ -1,4 +1,4 @@
-package chap1_7.overloading;
+package chap1_7.overlading;
 
 public class Example {
 
@@ -24,6 +24,9 @@ public class Example {
     public static void main(String[] args) {
 
         Example ex = new Example();
-        ex.add(10.3, 20.5);
+
+        System.out.println("실수의 합"+ ex.add(10.3,20.5));
+        System.out.println("정수의 합" + ex.add(10, 20));
+
     }
 }

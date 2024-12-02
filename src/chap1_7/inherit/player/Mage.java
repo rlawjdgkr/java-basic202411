@@ -9,7 +9,8 @@ public class Mage extends Player{
             this.mana = 60;
         }
 
-        // 상태정보를 확인하는 메서드
+
+    // 상태정보를 확인하는 메서드
 
 
     @Override
