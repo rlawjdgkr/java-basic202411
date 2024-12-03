@@ -14,6 +14,18 @@ public class Main {
         mage.showStatus();
         hunter.showStatus();
 
-        System.out.println();
+        System.out.println("==========================");
+
+        mage.fireBall(hunter);
+        mage.fireBall(warrior);
+        mage.fireBall(mage);
+
+        System.out.println("==============");
+        mage.thunderbolt(warrior,hunter
+                , new Mage("냠냠이")
+                , new Hunter("원생이"),
+                new Warrior("막띠려")
+
+        );
     }
 }

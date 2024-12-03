@@ -2,6 +2,8 @@ package practice.member;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
+
+import static practice.member.Gender.*;
 // 역할: 한 명의 회원정보를 잘 들고 있으면 됨
 
 public class Member {
@@ -10,7 +12,7 @@ public class Member {
     String password;
     String memberName;
     String id; //랜덤문자로 지정
-    Gender gender = Gender.FEMALE; //성별
+    Gender gender = FEMALE; //성별
     int age;
     LocalDateTime registerDate; //회원가입 일시
 
@@ -37,7 +39,7 @@ public class Member {
         System.out.println("# 회원번호: " + this.id);
         System.out.println("# 이메일: " + this.email);
         System.out.println("# 비밀번호: " + this.password);
-        System.out.println("# 성별: " + (this.gender == Gender.MALE ? "남성" : "여성"));
+        System.out.println("# 성별: " + (this.gender == MALE ? "남성" : "여성"));
         System.out.println("# 나이: " + this.age + "세");
         System.out.println("# 가입일시:" + this.registerDate);
         System.out.println();
