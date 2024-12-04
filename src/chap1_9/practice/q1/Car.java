@@ -3,7 +3,9 @@ package chap1_9.practice.q1;
 public class Car {
     private String mode;
     private int year;
-    static int count;
+    private static int count;
+
+    //객체가 생성될 떄 호출
 
     public Car(String mode, int year) {
         this.mode = mode;
