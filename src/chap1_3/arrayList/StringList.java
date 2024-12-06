@@ -15,6 +15,10 @@ public class StringList {
         sArr = new String[0];
     }
 
+    StringList(String... initItems) {
+        sArr = initItems;
+    }
+
     // 기능
     void modify(int index, String newFoodName) {
         if (isOutOfBounds(index)) return;
@@ -103,5 +107,9 @@ public class StringList {
         }
         temp[index] = newFoodName;
         sArr = temp;
+    }
+
+    int size() {
+        return sArr.length;
     }
 }
