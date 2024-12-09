@@ -1,10 +1,11 @@
 package chap2_4.song;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 // 가수
-public class Artist {
+public class Artist implements Serializable {
 
     private String artistName; // 가수명
     private Set<String> songList; // 노래목록
@@ -27,5 +28,13 @@ public class Artist {
     // 노래목록을 가져오는 기능
     public Set<String> getSongList() {
         return songList;
+    }
+
+    @Override
+    public String toString() {
+        return "Artist{" +
+                "artistName='" + artistName + '\'' +
+                ", songList=" + songList +
+                '}';
     }
 }
