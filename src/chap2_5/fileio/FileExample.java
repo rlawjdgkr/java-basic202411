@@ -7,7 +7,7 @@ public class FileExample {
 
     // 파일을 저장할 기본 경로 상수로 설정
 //    private static final String ROOT_PATH = "C:/fileUpload";
-    public static final String ROOT_PATH = "/Users/superstar/Desktop/fileUpload";
+    public static final String ROOT_PATH = "C:\\FileExample";
 
     public static void main(String[] args) {
 
@@ -17,7 +17,7 @@ public class FileExample {
 
         // 폴더생성하기
         if (!rootDirectory.exists()) { // 해당 경로가 존재하지 않는다면
-            rootDirectory.mkdir();
+            rootDirectory.mkdir();    //rootDirectory를 폴더 생성해라
         }
 
         // 파일 생성하기
@@ -26,7 +26,7 @@ public class FileExample {
 
         if (!newFile.exists()) {
             try {
-                newFile.createNewFile();
+                newFile.createNewFile();     //createNewFile 은 예외처리를 해줘야 하기 떼문에 try catch로 감싸줘야함
             } catch (IOException e) {
                 System.out.println("파일 생성에 실패했습니다.");
             }
